@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Play, Star } from 'lucide-react';
+import { TrendingUp, Play, Star, BarChart2 } from 'lucide-react';
 
 const Hero = () => {
   const scrollToPlans = () => {
@@ -41,15 +41,16 @@ const Hero = () => {
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
             >
               <TrendingUp className="h-5 w-5" />
-              <span>Get Started Today</span>
+              <span>Get Started Now</span>
             </button>
             <button 
             onClick={() => {
               const element = document.getElementById('how-it-works');
               element?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-purple-300 hover:text-purple-600 transition-all duration-300 flex items-center space-x-2">
-              <Play className="h-5 w-5" />
+            className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-purple-300 hover:text-purple-600 transition-all duration-300 flex items-center space-x-2"
+            >
+              <BarChart2 className="h-5 w-5" />
               <span>How it works</span>
             </button>
           </div>

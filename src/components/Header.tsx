@@ -19,7 +19,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
-              src="/WhatsApp Image 2025-06-30 at 12.42.48_8f88532a.jpg"
+              src="/logo.jpg"
               alt="Valora Growth Logo"
               className="h-9 w-9 rounded-xl shadow-md object-cover bg-white"
             />
@@ -69,23 +69,18 @@ const Header = () => {
               >
                 Plans
               </button>
-              <button
-                onClick={() => scrollToSection('tools')}
-                className="text-gray-700 hover:text-purple-600 transition-colors text-left"
-              >
-                Tools
-              </button>
+              
               <button
                 onClick={() => scrollToSection('how-it-works')}
                 className="text-gray-700 hover:text-purple-600 transition-colors text-left"
               >
-                How It Works
+                How It works
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 w-fit"
               >
-                Get Started
+                Get in Touch
               </button>
             </nav>
           </div>
