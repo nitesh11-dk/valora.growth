@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Check, Crown, Zap, Star } from 'lucide-react';
 
 const SubscriptionPlans = () => {
-  const [selectedDuration, setSelectedDuration] = useState('1 Month');
+  const [selectedDuration, setSelectedDuration] = useState('1 Week');
 
   const durations = ['1 Week', '1 Month', '3 Months'];
 
