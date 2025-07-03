@@ -11,16 +11,16 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=" bg-gray-50">
       <Header />
       <Hero />
       <SubscriptionPlans />
       {/* <InstagramTool /> */}
       <HowItWorks />
       <WhyChooseUs />
-      <Testimonials />
+      {<Testimonials /> }
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

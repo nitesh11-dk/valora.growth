@@ -7,7 +7,7 @@ const Contact = () => {
   };
 
   const handleInstagramClick = () => {
-    window.open('https://instagram.com/valora.growth', '_blank');
+    window.open('https://instagram.com/valoragrowth', '_blank');
   };
 
   return (
@@ -57,8 +57,8 @@ const Contact = () => {
                 <p className="text-gray-600">Follow us for tips</p>
               </div>
             </div>
-            <div className="text-2xl font-bold text-purple-600 mb-2">@valora.growth</div>
-            <p className="text-gray-600">Follow for daily growth tips and success stories</p>
+            <div className="text-2xl font-bold text-purple-600 mb-2">@valoragrowth</div>
+            <p className="text-gray-600">Follow for daily growth updates</p>
             <div className="mt-6 flex items-center text-purple-600 font-medium group-hover:translate-x-2 transition-transform">
               <span>Follow Now</span>
               <Instagram className="h-4 w-4 ml-2" />
@@ -81,8 +81,15 @@ const Contact = () => {
               <MessageCircle className="h-5 w-5" />
               <span>Chat on WhatsApp</span>
             </button>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              View Packages
+            <button 
+            onClick={() => {
+              const plansSection = document.getElementById('plans');
+              if (plansSection) {
+                plansSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              View Plans
             </button>
           </div>
 

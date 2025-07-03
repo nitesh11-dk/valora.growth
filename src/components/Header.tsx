@@ -1,21 +1,28 @@
 import React, { useState } from 'react';
-import { Menu, X, Instagram } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
   };
 
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
+          {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Instagram className="h-8 w-8 text-purple-600" />
+            <img
+              src="/WhatsApp Image 2025-06-30 at 12.42.48_8f88532a.jpg"
+              alt="Valora Growth Logo"
+              className="h-9 w-9 rounded-xl shadow-md object-cover bg-white"
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Valora Growth
             </span>
@@ -30,12 +37,6 @@ const Header = () => {
               Plans
             </button>
             <button
-              onClick={() => scrollToSection('tools')}
-              className="text-gray-700 hover:text-purple-600 transition-colors"
-            >
-              Tools
-            </button>
-            <button
               onClick={() => scrollToSection('how-it-works')}
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
@@ -45,11 +46,11 @@ const Header = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              Get Started
+              Get In Touch
             </button>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

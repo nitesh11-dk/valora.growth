@@ -43,9 +43,14 @@ const Hero = () => {
               <TrendingUp className="h-5 w-5" />
               <span>Get Started Today</span>
             </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-purple-300 hover:text-purple-600 transition-all duration-300 flex items-center space-x-2">
+            <button 
+            onClick={() => {
+              const element = document.getElementById('how-it-works');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-purple-300 hover:text-purple-600 transition-all duration-300 flex items-center space-x-2">
               <Play className="h-5 w-5" />
-              <span>Watch Demo</span>
+              <span>How it works</span>
             </button>
           </div>
 
