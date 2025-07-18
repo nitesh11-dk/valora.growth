@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SubscriptionPlans from './components/SubscriptionPlans';
@@ -8,20 +9,22 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AdminLogin from './components/AdminLogin';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <div className=" bg-gray-50">
-      <Header />
-      <Hero />
-      <SubscriptionPlans />
-      {/* <InstagramTool /> */}
-      <HowItWorks />
-      <WhyChooseUs />
-      {<Testimonials /> }
-      <Contact />
-      {/* <Footer /> */}
-    </div>
+    <Router>
+      <div className="bg-gray-50">
+        <Header />
+        <Routes>
+          <Route path="/" element={<><Hero /><SubscriptionPlans /><HowItWorks /><WhyChooseUs />{<Testimonials />}<Contact /></>} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
