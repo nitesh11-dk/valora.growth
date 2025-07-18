@@ -69,7 +69,7 @@ const Dashboard = () => {
                 await axios.post('https://valora-growth-backend.onrender.com/api/plans', values);
             }
             setModalOpen(false);
-            setEditPlan(null);€
+            setEditPlan(null);
             fetchPlans();
         } catch (err) {
             alert('Failed to save plan');
